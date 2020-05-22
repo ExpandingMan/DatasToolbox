@@ -20,11 +20,11 @@ function vim(str::AbstractString)
     read(fname, String)
 end
 
-function vim(obj)
+function vim(obj; nbytes::Integer=1, ncols::Integer=8)
     fname = stashdata(obj)
-    run(`$EDITOR -b +%!'xxd -g1' +'set ft=xxd' $fname`)
+    run(`$EDITOR -b +%!"xxd -g$nbytes -c$ncols" +'set ft=xxd' $fname`)
     io = IOBuffer()
-    run(pipeline(`xxd -r`, stdin=fname, stdout=io))
+    run(pipeline(`xxd -c$ncols -r`, stdin=fname, stdout=io))
     read(seekstart(io))
 end
 
