@@ -1,6 +1,6 @@
 # DatasToolbox
 
-<p align="center"><img src="https://i2.wp.com/www.tor.com/wp-content/uploads/2016/09/DataLaughing.jpg?resize=740%2C460&type=vertical&ssl=1" alt="mr tricorder" style="height:60%;width:60%"></p>
+<p align="center"><img src="https://i2.wp.com/www.tor.com/wp-content/uploads/2016/09/DataLaughing.jpg?resize=740%2C460&type=vertical&ssl=1" alt="mr tricorder" width="400" height="200"></p>
 
 A collection of useful tools I find myself needing or wanting in the Julia REPL.
 
