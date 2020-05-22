@@ -11,3 +11,15 @@ vim([1,2,3])
 ```
 will edit the array `[1,2,3]` in hex by way of `xxd`.  Save your work, and it will be
 returned as a `Vector{UInt8}`.
+
+You can also edit expressions by doing, e.g.
+```julia
+ex = quote
+    f(x) = a
+end
+vim(ex)  # returns edited expression
+```
+or you can start with an empty expression by doing
+```julia
+vim(Expr)
+```
